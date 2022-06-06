@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geekbrains.cloud.june.cloudapplication.ChatController" >
+   <VBox prefHeight="600.0" prefWidth="570.0">
+      <HBox prefHeight="25.0" prefWidth="400.0">
+         <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Back" onAction="#pathUpRequestClient"/>
+         <TextField prefHeight="50.0" prefWidth="411.0" fx:id="clientPath"/>
+         <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Go" onAction="#goClientPath"/>
+      </HBox>
+      <ListView prefHeight="565.0" prefWidth="570.0" fx:id="clientView" onMouseClicked="#pathInRequestClients"/>
+   </VBox>
+   <VBox prefHeight="600.0" prefWidth="60.0">
+      <Button mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" text="-----&gt;" onAction="#upload"/>
+      <Button mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" text="&lt;-----" onAction="#download"/>
+   </VBox>
+   <VBox prefHeight="600.0" prefWidth="570.0">
+      <HBox prefHeight="25.0" prefWidth="570.0">
+         <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Back" onAction="#pathUpRequestServer"/>
+         <TextField prefHeight="57.0" prefWidth="413.0" fx:id="serverPath"/>
+         <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Go" onAction="#goServerPath"/>
+      </HBox>
+      <ListView prefHeight="577.0" prefWidth="570.0" fx:id="serverView" onMouseClicked="#pathInRequestServer"/>
+   </VBox>
+</HBox>
